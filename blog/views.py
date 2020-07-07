@@ -9,6 +9,6 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts})
     # render : MVT 중 template을 불러오는 메소드
 
-# def post_detail(request, pk):
-#     post = get_object_or_404(Post, pk=pk)
-#     return render(request, 'blog/post_detail.html', {'post': post})
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/post_detail.html', {'post': post})
